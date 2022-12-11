@@ -1,0 +1,67 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="precompiled" >
+    <span class="internal-use-pojo-fqcn" data-sly-use.pojoFQCN="org.apache.sling.scripting.sightly.testing.precompiled.InternalUsePojo">
+        ${pojoFQCN.resourcePath}
+    </span><br/>
+    <span class="internal-use-pojo-scn" data-sly-use.pojoSCN="InternalUsePojo">
+        ${pojoSCN.resourcePath}
+    </span><br/>
+    <span class="internal-exported-sling-model"
+          data-sly-use.internalExportedSlingModel="${'org.apache.sling.scripting.sightly.testing.precompiled.models.ExportedTestModel' @ name ='John Doe'}">
+        ${internalExportedSlingModel.sayHello}
+    </span><br/>
+    <span class="internal-sling-model"
+          data-sly-use.internalSlingModel="${'org.apache.sling.scripting.sightly.testing.precompiled.models.impl.InternalTestModel'  @ name ='John Doe'}">
+        ${internalSlingModel.sayHello}
+    </span><br/>
+    <span class="request-adapter"
+          data-sly-use.requestAdapter="org.apache.sling.scripting.sightly.testing.adaptable.RequestAdapterUseObject">
+        ${requestAdapter.title}
+    </span><br/>
+    <span class="resource-adapter"
+          data-sly-use.resourceAdapter="org.apache.sling.scripting.sightly.testing.adaptable.ResourceAdapterUseObject">
+        ${resourceAdapter.title}
+    </span><br/>
+    <span class="resolver-adapter"
+          data-sly-use.resolverAdapter="${'org.apache.sling.scripting.sightly.testing.adaptable.ResourceResolverAdapterUseObject' @ adaptable = request.resourceResolver}">
+        ${resolverAdapter.title}
+    </span><br/>
+    <span class="request-model"
+          data-sly-use.requestModel="${'org.apache.sling.scripting.sightly.testing.models.RequestModel' @ argument='SUCCESS'}">
+        ${requestModel.title}
+    </span><br/>
+    <span class="resource-model"
+          data-sly-use.resourceModel="org.apache.sling.scripting.sightly.testing.models.ResourceModel">
+        ${resourceModel.title}
+    </span><br/>
+    <span class="test-service"
+          data-sly-use.testService="org.apache.sling.scripting.sightly.testing.use.TestService">
+        ${testService.sayHello}
+    </span><br/>
+    <span class="internal-script" data-sly-use.scriptEcma="script.ecma">
+        ${scriptEcma}
+    </span><br/>
+    <span class="internal-jsuse-script" data-sly-use.scriptJsUseInternal="script.js">
+        ${scriptJsUseInternal.message}
+    </span><br/>
+    <span class="provided-jsuse-script" data-sly-use.providedJsUse="/apps/sightly/scripts/use/jsuse.js">
+        ${providedJsUse.resourceName} - ${providedJsUse.resourceResourceType}
+    </span>
+</div>
